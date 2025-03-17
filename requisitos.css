@@ -1,0 +1,174 @@
+/* Estilização da Página */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0a0a0a;
+    color: white;
+    text-align: center;
+}
+
+/* Estilização da Hero Section */
+#requistos {
+    display: flex;
+    align-items: center;
+    justify-content: justify;
+    height: 100vh;
+    text-align: center;
+    flex-direction: column;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), #0a0a0a);
+    opacity: 0;
+    animation: fadeIn 1.5s forwards ease-in-out;
+    border-left: 5px solid #84ff00;
+    padding: 20px;
+}
+
+/* Estilização do título */
+#requisitos h1 {
+    font-size: 3em;
+    font-weight: bold;
+    color: #84ff00;
+    margin-bottom: 20px;
+    opacity: 0;
+    transform: translateY(-30px);
+    animation: slideDown 1s forwards ease-out;
+}
+
+/* Estilização do texto */
+#requisitos p {
+    font-size: 1.1em;
+    max-width: 70%;
+    line-height: 1.5;
+    margin: 8px auto;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: slideUp 1s 0.5s forwards ease-out;
+    text-align: justify;
+    letter-spacing: 0.5px;
+    text-shadow: 1px 1px 5px rgba(132, 255, 0, 0.2);
+}
+
+#requisitos p strong {
+    color: #84ff00;
+    font-weight: bold;
+}
+
+/* Botão estilizado */
+#requisitos button {
+    padding: 12px 24px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: black;
+    background: #84ff00;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    border-radius: 8px;
+    opacity: 0;
+    transform: scale(0.8);
+    animation: fadeIn 1.5s 1s forwards ease-out;
+}
+
+/* Efeito hover no botão */
+#requisitos button:hover {
+    background: #6ac800;
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(132, 255, 0, 0.8);
+}
+
+/* Animações */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideDown {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Estilização do conteúdo dos requisitos */
+#requisitos {
+    margin: 20px;
+    padding: 20px;
+    background-color: #222;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+/* Estilização do título da seção de requisitos */
+#requisitos h2 {
+    color: #84ff00;
+    opacity: 0;
+    transform: translateY(-30px);
+    animation: slideDown 1s forwards ease-out;
+}
+
+/* Estilização das listas de requisitos */
+.requisitos-funcionais,
+.requisitos-nao-funcionais {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: 1.1em;
+    line-height: 1.6;
+    counter-reset: requisitos-counter;
+    text-align: justify;  /* Adiciona o texto justificado */
+}
+
+/* Numeração automática para requisitos funcionais */
+.requisitos-funcionais li,
+.requisitos-nao-funcionais li {
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: slideUp 1s 0.5s forwards ease-out;
+}
+
+/* Ajustando a numeração para ficar próxima ao texto */
+.requisitos-funcionais li::before,
+.requisitos-nao-funcionais li::before {
+    content: counter(requisitos-counter, decimal) ". ";
+    position: absolute;
+    left: 0;
+    color: #84ff00;
+    font-weight: bold;
+    counter-increment: requisitos-counter;
+    margin-right: 10px; /* Ajusta a distância do número para o texto */
+}
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+    #introducao {
+        padding: 50px 10px;
+    }
+
+    #introducao h1 {
+        font-size: 2.2em;
+    }
+
+    #introducao p {
+        font-size: 1em;
+        max-width: 90%;
+    }
+
+    #introducao button {
+        font-size: 1em;
+        padding: 10px 20px;
+    }
+
+    #requisitos {
+        padding: 15px;
+    }
+}

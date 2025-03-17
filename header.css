@@ -1,0 +1,45 @@
+/* CSS do Cabeçalho */
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 15px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.logo {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #84ff00;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2em;
+    transition: color 0.3s;
+}
+
+ul li a:hover, .active {
+    color: #84ff00;
+}
+
+.icons span {
+    margin-left: 15px;
+    cursor: pointer;
+}
