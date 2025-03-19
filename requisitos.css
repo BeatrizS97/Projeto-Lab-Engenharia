@@ -5,6 +5,18 @@ body {
     background: #0a0a0a;
     color: white;
     text-align: center;
+    padding: 20px;
+}
+
+/* Estilização do título */
+#requisitos h2 {
+    font-size: 2em;
+    font-weight: bold;
+    color: #84ff00;
+    margin-bottom: 20px;
+    transform: translateY(-30px);
+    animation: slideDown 1s 0.5s forwards ease-out;
+    text-align: center; /* Centraliza o título */
 }
 
 /* Estilização da Hero Section */
@@ -13,24 +25,34 @@ body {
     align-items: center;
     justify-content: justify;
     height: 100vh;
-    text-align: center;
+    text-align: justify;
     flex-direction: column;
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), #0a0a0a);
     opacity: 0;
-    animation: fadeIn 1.5s forwards ease-in-out;
+    animation: fadeIn 1.5s 0.2s forwards ease-in-out;
     border-left: 5px solid #84ff00;
-    padding: 20px;
+    padding: 30px;
+    text-shadow: 1px 1px 5px rgba(132, 255, 0, 0.2);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
 }
 
-/* Estilização do título */
-#requisitos h1 {
-    font-size: 3em;
-    font-weight: bold;
-    color: #84ff00;
-    margin-bottom: 20px;
-    opacity: 0;
-    transform: translateY(-30px);
-    animation: slideDown 1s forwards ease-out;
+/* Contêiner interno para o texto */
+#requisitos .texto {
+    width: 100%; /* Isso faz com que o contêiner interno ocupe toda a largura */
+    text-align: justify; /* Justifica o texto */
+    margin: 0 auto; /* Centraliza o contêiner interno */
+}
+
+/* Estilização da lista de objetivos */
+#requisitos ul {
+    list-style: none;
+    margin: 20px auto;
+    padding: 0;
+    max-width: 1000px;
+    text-align: left;
+    display: block;
+    letter-spacing: 0.5px;
 }
 
 /* Estilização do texto */
@@ -100,19 +122,25 @@ body {
 #requisitos {
     margin: 20px;
     padding: 20px;
-    background-color: #222;
+    background-color: #0a0a0a;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    border-left: 5px solid #84ff00;
+    text-shadow: 1px 1px 5px rgba(132, 255, 0, 0.2);
+    border-radius: 10px;
 }
 
 /* Estilização do título da seção de requisitos */
-#requisitos h2 {
-    color: #84ff00;
+#requisitos h3 {
+    color: white;
+    font-weight: bold;
+    text-align:left;
     opacity: 0;
+    font-size: 25px;
     transform: translateY(-30px);
     animation: slideDown 1s forwards ease-out;
+    margin-left: 60px;
 }
-
 /* Estilização das listas de requisitos */
 .requisitos-funcionais,
 .requisitos-nao-funcionais {
@@ -121,49 +149,68 @@ body {
     padding: 0;
     font-size: 1.1em;
     line-height: 1.6;
-    counter-reset: requisitos-counter;
-    text-align: justify;  /* Adiciona o texto justificado */
+    text-align: justify;
+}
+
+/* Contadores individuais para cada lista */
+.requisitos-funcionais {
+    counter-reset: requisitos-funcionais-counter;
+}
+
+.requisitos-nao-funcionais {
+    counter-reset: requisitos-nao-funcionais-counter;
 }
 
 /* Numeração automática para requisitos funcionais */
-.requisitos-funcionais li,
-.requisitos-nao-funcionais li {
+.requisitos-funcionais li {
+    counter-increment: requisitos-funcionais-counter;
     margin-bottom: 10px;
-    padding-left: 20px;
+    padding-left: 25px;
     position: relative;
-    opacity: 0;
-    transform: translateY(30px);
-    animation: slideUp 1s 0.5s forwards ease-out;
 }
 
-/* Ajustando a numeração para ficar próxima ao texto */
-.requisitos-funcionais li::before,
-.requisitos-nao-funcionais li::before {
-    content: counter(requisitos-counter, decimal) ". ";
+/* Numeração automática para requisitos não funcionais */
+.requisitos-nao-funcionais li {
+    counter-increment: requisitos-nao-funcionais-counter;
+    margin-bottom: 10px;
+    padding-left: 25px;
+    position: relative;
+}
+
+/* Ajustando a numeração para requisitos funcionais */
+.requisitos-funcionais li::before {
+    content: counter(requisitos-funcionais-counter) ". ";
     position: absolute;
     left: 0;
     color: #84ff00;
     font-weight: bold;
-    counter-increment: requisitos-counter;
-    margin-right: 10px; /* Ajusta a distância do número para o texto */
+}
+
+/* Ajustando a numeração para requisitos não funcionais */
+.requisitos-nao-funcionais li::before {
+    content: counter(requisitos-nao-funcionais-counter) ". ";
+    position: absolute;
+    left: 0;
+    color: #6ac800; /* Cor diferente para destacar */
+    font-weight: bold;
 }
 
 /* Responsividade */
 @media screen and (max-width: 768px) {
-    #introducao {
+    #requisitos {
         padding: 50px 10px;
     }
 
-    #introducao h1 {
+    #requisitos h2 {
         font-size: 2.2em;
     }
 
-    #introducao p {
+    #requisitos p {
         font-size: 1em;
         max-width: 90%;
     }
 
-    #introducao button {
+    #requisitos button {
         font-size: 1em;
         padding: 10px 20px;
     }
