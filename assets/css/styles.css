@@ -24,8 +24,8 @@ body {
 .hero h1 {
     font-size: 2.4em; /* Reduzido do original 3em */
     font-weight: bold;
-    text-transform: uppercase;
     margin-bottom: 4px; /* Reduzido o espaçamento entre os títulos */
+    line-height: 1.0;
 }
 
 .hero h1:nth-child(2) {

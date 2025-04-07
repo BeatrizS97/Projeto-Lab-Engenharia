@@ -53,6 +53,7 @@ nav ul li a {
     font-size: 1.2em;
     padding: 10px;
     display: block;
+    font-weight: bold;
     transition: color 0.3s;
 }
 

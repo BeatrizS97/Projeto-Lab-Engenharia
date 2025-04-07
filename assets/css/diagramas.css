@@ -1,0 +1,169 @@
+/* Estilos Gerais */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: #0a0a0a; /* Fundo preto */
+    color: white; /* Texto branco */
+    text-align: center;
+    overflow-x: hidden; /* Evita barra de rolagem horizontal indesejada */
+}
+
+/* Cabeçalho Fixo */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #000; /* Preto */
+    z-index: 1000; /* Garante que o cabeçalho fique acima de outros elementos */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.logo {
+    color: #84ff00; /* Verde neon */
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #84ff00; /* Verde neon */
+}
+
+/* Main Content */
+#diagramas {
+    padding-top: 80px; /* Espaço para evitar que o conteúdo fique sob o cabeçalho fixo */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px; /* Espaçamento entre os elementos */
+    margin-bottom: 60px; /* Cria espaço suficiente para o rodapé */
+}
+
+.diagram-title {
+    font-size: 2em;
+    font-weight: bold;
+    color: #84ff00; /* Verde neon */
+    margin-bottom: 20px;
+    opacity: 0;
+    transform: translateY(-30px);
+    animation: slideUp 1s forwards ease-out;
+}
+
+/* Contêiner para as imagens */
+.diagram-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px; /* Espaçamento entre os diagramas */
+}
+
+/* Cada item do diagrama */
+.diagram-item {
+    text-align: center;
+}
+
+/* Título de cada diagrama */
+.diagram-item h3 {
+    margin-bottom: 10px; /* Espaço entre o título e a imagem */
+    font-size: 1.5em; /* Tamanho do título */
+    color: #84ff00; /* Verde neon */
+}
+
+/* Imagens dos diagramas */
+.diagram-image {
+    max-width: 80%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.diagram-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
+}
+
+/* Botão Próxima Página */
+#next-page-button {
+    padding: 12px 24px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: black; /* Texto preto */
+    background: #84ff00; /* Verde neon */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    opacity: 0;
+    transform: scale(0.8);
+    animation: fadeIn 1.5s 1s forwards ease-out; /* Animação de entrada */
+    margin-top: 40px; /* Adiciona espaço acima do botão */
+}
+
+#next-page-button:hover {
+    background: #6ac800; /* Verde mais escuro */
+    transform: scale(1.05); /* Aumenta ligeiramente o tamanho */
+    box-shadow: 0 0 10px rgba(132, 255, 0, 0.8); /* Sombras brilhantes */
+}
+
+/* Rodapé */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 20px; /* Reduzindo o espaço interno */
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 40px; /* Altura menor para caber apenas a frase */
+}
+
+/* Animações */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+    .diagram-title {
+        font-size: 1.8em; /* Reduz o tamanho dos títulos */
+    }
+
+    .diagram-image {
+        max-width: 90%; /* Ajusta as imagens para caber na tela */
+    }
+
+    #next-page-button {
+        font-size: 1em; /* Reduz o tamanho do botão */
+        padding: 10px 20px;
+    }
+}

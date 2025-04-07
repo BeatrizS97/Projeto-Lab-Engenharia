@@ -17,6 +17,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
 document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("start-btn").addEventListener("click", function() {
-        window.location.href = 'introducao.html';
+        window.location.href = 'pages/introducao.html';
     });
 });
