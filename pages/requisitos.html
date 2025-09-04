@@ -3,44 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Requisitos do Sistema</title>
+    <title>Requisitos do Sistema - Plataforma para Formulários Personalizados</title>
     <link rel="stylesheet" href="../assets/css/requisitos.css">
-    <link rel="stylesheet" href="../assets/css/header.css">
+    <!-- Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts - Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="index.html">Início</a></li>
-            <li><a href="introducao.html">Introdução</a></li>
-            <li><a href="objetivo.html">Objetivos</a></li>
-            <li><a href="requisitos.html">Requisitos</a></li>
-            <li><a href="banco.html">Banco de Dados</a></li>
-            <li><a href="diagramas.html">Diagramas</a></li>
-            <li><a href="tecnologias.html">Tecnologias</a></li>
-        </ul>
-    </nav>
-    
-    <section id="requisitos">
-        <h2>Requisitos do Sistema</h2>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <a href="#" class="logo">
+                <svg class="logo-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4 6H20M4 12H20M4 18H12" stroke="#00ff00da" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                <span class="logo-text">Form Generator</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="../index.html" title="Voltar à página inicial"><i class="fas fa-home"></i><span class="nav-text">Início</span></a></li>
+                    <li><a href="introducao.html" title="Introdução ao projeto"><i class="fas fa-book"></i><span class="nav-text">Introdução</span></a></li>
+                    <li><a href="objetivo.html" title="Objetivos do projeto"><i class="fas fa-bullseye"></i><span class="nav-text">Objetivos</span></a></li>
+                    <li><a href="requisitos.html" title="Requisitos do sistema"><i class="fas fa-list"></i><span class="nav-text">Requisitos</span></a></li>
+                    <li><a href="banco.html" title="Estrutura do banco de dados"><i class="fas fa-database"></i><span class="nav-text">Banco de Dados</span></a></li>
+                    <li><a href="diagramas.html" title="Diagramas do projeto"><i class="fas fa-project-diagram"></i><span class="nav-text">Diagramas</span></a></li>
+                    <li><a href="tecnologias.html" title="Tecnologias utilizadas"><i class="fas fa-cogs"></i><span class="nav-text">Tecnologias</span></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-        <h3>Requisitos Funcionais</h3>
-        <ul class="requisitos-funcionais">
-            <li><strong>Autenticação e Cadastro</strong>: Registro de usuários com dois perfis (Administrador e Usuário Respondente), com login seguro.</li>
-            <li><strong>Gestão de Formulários</strong>: Criação, edição e visualização de formulários com categorias, tipos de perguntas e respostas.</li>
-            <li><strong>Respostas e Armazenamento</strong>: Permitir que os usuários respondam aos formulários, com armazenamento estruturado de respostas.</li>
-            <li><strong>Relatórios Dinâmicos</strong>: Geração de relatórios dinâmicos com tabelas e gráficos baseados nas respostas coletadas.</li>
-        </ul>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>REQUISITOS</h1>
+            <h2 class="enhanced-subtitle">Especificações do Sistema</h2>
+            <div class="intro-content">
+                <h3>Requisitos Funcionais</h3>
+                <ul class="requisitos-funcionais">
+                    <li><strong>Autenticação e Cadastro</strong>: Registro de usuários com dois perfis (Administrador e Usuário Respondente), com login seguro.</li>
+                    <li><strong>Gestão de Formulários</strong>: Criação, edição e visualização de formulários com categorias, tipos de perguntas e respostas.</li>
+                    <li><strong>Respostas e Armazenamento</strong>: Permitir que os usuários respondam aos formulários, com armazenamento estruturado de respostas.</li>
+                    <li><strong>Relatórios Dinâmicos</strong>: Geração de relatórios dinâmicos com tabelas e gráficos baseados nas respostas coletadas.</li>
+                </ul>
 
-        <h3>Requisitos Não Funcionais</h3>
-        <ul class="requisitos-nao-funcionais">
-            <li><strong>Interface Responsiva</strong>: A plataforma deve ser intuitiva e responsiva para diferentes dispositivos.</li>
-            <li><strong>Banco de Dados Dinâmico e Escalável</strong>: Uso de banco de dados escalável, como PostgreSQL ou MySQL.</li>
-            <li><strong>Desempenho</strong>: O sistema deve garantir alta performance no processamento de formulários e respostas.</li>
-            <li><strong>Segurança</strong>: A segurança dos dados deve ser garantida com criptografia de senhas e respostas armazenadas de forma segura.</li>
-            <li><strong>Hospedagem em Nuvem</strong>: A solução deve ser preparada para hospedagem em plataformas de nuvem, como AWS, Azure ou DigitalOcean.</li>
-        </ul>
-
-        <button onclick="location.href='banco.html'">Próximo</button>
+                <h3>Requisitos Não Funcionais</h3>
+                <ul class="requisitos-nao-funcionais">
+                    <li><strong>Interface Responsiva</strong>: A plataforma deve ser intuitiva e responsiva para diferentes dispositivos.</li>
+                    <li><strong>Banco de Dados Dinâmico e Escalável</strong>: Uso de banco de dados escalável, como PostgreSQL ou MySQL.</li>
+                    <li><strong>Desempenho</strong>: O sistema deve garantir alta performance no processamento de formulários e respostas.</li>
+                    <li><strong>Segurança</strong>: A segurança dos dados deve be garantida com criptografia de senhas e respostas armazenadas de forma segura.</li>
+                    <li><strong>Hospedagem em Nuvem</strong>: A solução deve ser preparada para hospedagem em plataformas de nuvem, como AWS, Azure ou DigitalOcean.</li>
+                </ul>
+            </div>
+            <div class="button-container">
+                <button class="cta-btn" onclick="location.href='banco.html'">Próximo</button>
+            </div>
+        </div>
     </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>© 2025 Form Generator. Desenvolvido por Beatriz Silva Santos.</p>
+            <ul class="footer-links">
+                <li><a href="#">Termos de Uso</a></li>
+                <li><a href="#">Política de Privacidade</a></li>
+                <li><a href="#team">Contato</a></li>
+            </ul>
+        </div>
+    </footer>
 </body>
 </html>

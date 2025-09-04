@@ -3,52 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Objetivo</title>
+    <title>Objetivos - Plataforma para Formulários Personalizados</title>
     <link rel="stylesheet" href="../assets/css/objetivo.css">
-    <link rel="stylesheet" href="../assets/css/header.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="index.html">Início</a></li>
-            <li><a href="introducao.html">Introdução</a></li>
-            <li><a href="objetivo.html">Objetivos</a></li>
-            <li><a href="requisitos.html">Requisitos</a></li>
-            <li><a href="banco.html">Banco de Dados</a></li>
-            <li><a href="diagramas.html">Diagramas</a></li>
-            <li><a href="tecnologias.html">Tecnologias</a></li>
-        </ul>
-    </nav>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <a href="#" class="logo">
+                <svg class="logo-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4 6H20M4 12H20M4 18H12" stroke="#00ff00da" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                <span class="logo-text">Form Generator</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="../index.html" title="Voltar à página inicial"><i class="fas fa-home"></i><span class="nav-text">Início</span></a></li>
+                    <li><a href="introducao.html" title="Introdução ao projeto"><i class="fas fa-book"></i><span class="nav-text">Introdução</span></a></li>
+                    <li><a href="objetivo.html" title="Objetivos do projeto"><i class="fas fa-bullseye"></i><span class="nav-text">Objetivos</span></a></li>
+                    <li><a href="requisitos.html" title="Requisitos do sistema"><i class="fas fa-list"></i><span class="nav-text">Requisitos</span></a></li>
+                    <li><a href="banco.html" title="Estrutura do banco de dados"><i class="fas fa-database"></i><span class="nav-text">Banco de Dados</span></a></li>
+                    <li><a href="diagramas.html" title="Diagramas do projeto"><i class="fas fa-project-diagram"></i><span class="nav-text">Diagramas</span></a></li>
+                    <li><a href="tecnologias.html" title="Tecnologias utilizadas"><i class="fas fa-cogs"></i><span class="nav-text">Tecnologias</span></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-    <div id="objetivo">
-        <h1>Objetivo</h1>
-        <section id="objetivos">
-            <h2>Objetivo Geral</h2>
-            <ul>
-                <li>Desenvolver uma plataforma intuitiva e responsiva para a criação, gestão e análise de formulários personalizados, permitindo que os usuários criem formulários dinâmicos com perguntas condicionais e obtenham relatórios detalhados das respostas.</li>
-             </ul>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>OBJETIVOS</h1>
+            <h2 class="enhanced-subtitle">Objetivo Geral</h2>
+            <div class="intro-content">
+                <ul>
+                    <li>Desenvolver uma plataforma intuitiva e responsiva para a criação, gestão e análise de formulários personalizados, permitindo que os usuários criem formulários dinâmicos com perguntas condicionais e obtenham relatórios detalhados das respostas.</li>
+                </ul>
+            </div>
 
-            <h3>Objetivos Específicos</h3>
-            <ul class="especificos">
-                <li class="especifico">Criar uma interface intuitiva e responsiva para todos os dispositivos.</li>  
-                <li class="especifico">Desenvolver um sistema para criação, edição e visualização de formulários.</li>  
-                <li class="especifico">Permitir categorização e definição de tipos de perguntas e respostas.</li>  
-                <li class="especifico">Implementar perguntas de múltipla escolha, texto livre e outros formatos.</li>  
-                <li class="especifico">Vincular perguntas a categorias e tipos para melhor organização.</li>  
-                <li class="especifico">Adicionar perguntas condicionais com base em respostas anteriores.</li>  
-                <li class="especifico">Criar fluxos dinâmicos com relações condicionais entre perguntas.</li>  
-                <li class="especifico">Facilitar a resposta aos formulários e armazenar dados de forma eficiente.</li>  
-                <li class="especifico">Garantir segurança e integridade dos dados com criptografia e autenticação.</li>  
-                <li class="especifico">Gerar relatórios dinâmicos com tabelas, gráficos e exportação (CSV/PDF).</li>  
-                <li class="especifico">Implementar filtros para análise de dados.</li>  
-                <li class="especifico">Criar um sistema de autenticação com perfis de Administrador e Usuário.</li>  
-                <li class="especifico">Assegurar um banco de dados escalável e de alto desempenho.</li>  
-                <li class="especifico">Garantir suporte a alta carga de usuários sem perda de performance.</li>  
-                <li class="especifico">Preparar a solução para hospedagem em nuvem com alta disponibilidade.</li>  
+            <h2 class="enhanced-subtitle">Objetivos Específicos</h2>
+            <div class="intro-content">
+                <ol class="especificos">
+                    <li>Criar uma interface intuitiva e responsiva para todos os dispositivos.</li>
+                    <li>Desenvolver um sistema para criação, edição e visualização de formulários.</li>
+                    <li>Permitir categorização e definição de tipos de perguntas e respostas.</li>
+                    <li>Implementar perguntas de múltipla escolha, texto livre e outros formatos.</li>
+                    <li>Vincular perguntas a categorias e tipos para melhor organização.</li>
+                    <li>Adicionar perguntas condicionais com base em respostas anteriores.</li>
+                    <li>Criar fluxos dinâmicos com relações condicionais entre perguntas.</li>
+                    <li>Facilitar a resposta aos formulários e armazenar dados de forma eficiente.</li>
+                    <li>Garantir segurança e integridade dos dados com criptografia e autenticação.</li>
+                    <li>Gerar relatórios dinâmicos com tabelas, gráficos e exportação (CSV/PDF).</li>
+                    <li>Implementar filtros para análise de dados.</li>
+                    <li>Criar um sistema de autenticação com perfis de Administrador e Usuário.</li>
+                    <li>Assegurar um banco de dados escalável e de alto desempenho.</li>
+                    <li>Garantir suporte a alta carga de usuários sem perda de performance.</li>
+                    <li>Preparar a solução para hospedagem em nuvem com alta disponibilidade.</li>
+                </ol>
+            </div>
+
+            <div class="button-container">
+                <button class="cta-btn" onclick="location.href='requisitos.html'">Próximo</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>© 2025 Form Generator. Desenvolvido por Beatriz Silva Santos.</p>
+            <ul class="footer-links">
+                <li><a href="#">Termos de Uso</a></li>
+                <li><a href="#">Política de Privacidade</a></li>
+                <li><a href="#team">Contato</a></li>
             </ul>
-            <button onclick="location.href='requisitos.html'">Próximo</button>
-
-        </section>
-    </div>
+        </div>
+    </footer>
 </body>
 </html>
